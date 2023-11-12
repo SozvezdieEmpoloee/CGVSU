@@ -1,5 +1,6 @@
 package com.cgvsu.objreader;
 
+import com.cgvsu.math.NormalCounter;
 import com.cgvsu.math.Vector2f;
 import com.cgvsu.math.Vector3f;
 import com.cgvsu.model.Model;
@@ -84,9 +85,9 @@ public class ObjReader {
 		}
 	}
 
-	protected static Vector3f parseNormal(final ArrayList<String> wordsInLineWithoutToken, int lineInd) {
+	protected static NormalCounter.Vector3f parseNormal(final ArrayList<String> wordsInLineWithoutToken, int lineInd) {
 		try {
-			return new Vector3f(
+			return new NormalCounter.Vector3f(
 					Float.parseFloat(wordsInLineWithoutToken.get(0)),
 					Float.parseFloat(wordsInLineWithoutToken.get(1)),
 					Float.parseFloat(wordsInLineWithoutToken.get(2)));

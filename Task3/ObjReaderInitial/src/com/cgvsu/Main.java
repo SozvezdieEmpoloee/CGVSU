@@ -1,5 +1,6 @@
 package com.cgvsu;
 
+import com.cgvsu.math.NormalCounter;
 import com.cgvsu.model.Model;
 import com.cgvsu.objreader.ObjReader;
 
@@ -19,7 +20,9 @@ public class Main {
 
         System.out.println("Vertices: " + model.vertices.size());
         System.out.println("Texture vertices: " + model.textureVertices.size());
+        NormalCounter.calculateNormals(model);
         System.out.println("Normals: " + model.normals.size());
         System.out.println("Polygons: " + model.polygons.size());
+
     }
 }
